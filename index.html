@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+  
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="mt-5">
+    <div class="container mt-5 " style="background-color: gray;">
+    <h1 class="text-center class=text-primary" style="bottom: 20%;">Welcome to Yet Another E-BookShop</h1><br>
+       <b>Choose an Author:</b>
+            <select id="book" name="book">
+                <option value="">==select==</option>
+            </select><br><br><br>
+            <p>OR</p><br><br>
+            <b>Search  "Title" or "Author":</b>
+               <input id="titleorAuthor">
+            <button type="button" class="btn btn-primary" onclick="search();">Search</button>
+            <button type="reset" class="btn btn-danger">Clear</button>
+      </div>
+    </div>  
+ <div class="container" id="myDIV" >
+        <h1 >Query Results</h1>
+    </div>
+        <div class="container">
+        <table class="table table-dark" id="tableId">
+            <thead>
+                <tr>
+                    <th >CHECK</th>
+                    <th>AUTHOR </th>
+                    <th >TITLE</th>
+                    <th >PRICE</th>
+                    <th >QUANTITY</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    
+
+        <div class="container">
+        <div class="form-group">
+            <label for="name">Enter Your Name : </label>
+            <input type="text" name="name" id="name" placeholder="Enter  your Name here"value=""><br>
+        </div>
+        <div class="form-group">
+            <label for="email">Enter Your Email : </label>
+            <input type="email" name="email" id="email" placeholder="Enter  your Email here" value=""><br>
+        </div>
+        <div class="form-group">
+            <label for="mobile">Enter Your Mobile Number : </label>
+            <input type="text" name="mobileNumber" id="mobileNumber" placeholder="Enter  your Mobile Number here" value=""><br>
+        </div>
+        <div class="form-group">
+            <button type="button" onclick="orderItems();" class="btn btn-success">Order</button>
+            <button type="button" class="btn btn-danger">Clear</button>
+        </div>
+    </div>
+
+    
+
+
+    <div class="container" >
+    <h1>ORDER CONFIRMATION</h1>
+<div class="form-group">
+            <span>Customer Name : <b id="cusName"></b></span>
+        </div>
+        <div class="form-group">
+             <span >Customer Email : <b  id="cusEmail"></b></span>
+        </div>
+        <div class="form-group">
+            <span>Customer mobileNumber : <b id="cusMobileNumber"></b></span>
+        </div>
+
+    </div>
+<div class="container" >
+       <table class="table table-dark" id="receivedDataList">
+            <thead>
+                <tr>
+                    <th >AUTHOR</th>
+                    <th >TITLE</th>
+                    <th >PRICE</th>
+                    <th >QUANTITY</th>
+                </tr>
+            </thead>
+        </table>
+        <tr class="float-right">Total Cost : <p id="totalCost"></p>
+        </tr>
+    </div>
+
+
+
+    <script src="./Books/book.js"></script>
+    <script src="./Books/index.js"></script>
+</body>
+
+</html>
